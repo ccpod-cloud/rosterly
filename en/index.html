@@ -9,6 +9,12 @@
 <link rel="canonical" href="https://ccpod-cloud.github.io/rosterly/en/">
 <link rel="alternate" hreflang="it" href="https://ccpod-cloud.github.io/rosterly/">
 <link rel="alternate" hreflang="en" href="https://ccpod-cloud.github.io/rosterly/en/">
+<link rel="alternate" hreflang="es" href="https://ccpod-cloud.github.io/rosterly/es/">
+<link rel="alternate" hreflang="fr" href="https://ccpod-cloud.github.io/rosterly/fr/">
+<link rel="alternate" hreflang="de" href="https://ccpod-cloud.github.io/rosterly/de/">
+<link rel="alternate" hreflang="pt" href="https://ccpod-cloud.github.io/rosterly/pt/">
+<link rel="alternate" hreflang="nl" href="https://ccpod-cloud.github.io/rosterly/nl/">
+<link rel="alternate" hreflang="pl" href="https://ccpod-cloud.github.io/rosterly/pl/">
 <link rel="alternate" hreflang="x-default" href="https://ccpod-cloud.github.io/rosterly/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rosterly – fees, attendance and medicals for coaches">
@@ -27,7 +33,7 @@
   "applicationCategory": "SportsApplication",
   "operatingSystem": "Android, iOS",
   "description": "App for coaches: monthly fees, attendance, medical certificates, WhatsApp reminders and PDF receipts. Data stays on the phone.",
-  "inLanguage": ["it", "en", "es", "fr", "de", "pt"],
+  "inLanguage": ["it", "en", "es", "fr", "de", "pt", "nl", "pl"],
   "offers": [
     { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Free for up to 10 athletes" },
     { "@type": "Offer", "price": "1.99", "priceCurrency": "EUR", "description": "Rosterly Pro monthly" }
@@ -51,7 +57,7 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
   header.top { display: flex; align-items: center; justify-content: space-between; padding-block: 18px; }
   .brand { display: flex; align-items: center; gap: 10px; font: 800 20px var(--display); font-stretch: 115%; color: var(--ink); text-decoration: none; }
-  .lang { font-size: 15px; font-weight: 600; text-decoration: none; }
+  .lang { font: 600 15px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; }
   .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding-block: 40px 64px; }
   h1 { font: 850 clamp(36px, 6vw, 60px)/1.02 var(--display); font-stretch: 118%; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
   .lead { font-size: 19px; color: var(--muted); max-width: 34ch; margin: 18px 0 26px; }
@@ -98,7 +104,7 @@
       <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1D3BFF"/><g transform="translate(-4.5 0)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.5"><path d="M55.5 69.5 L80 38" stroke="#FF5B2E"/><path d="M30 75 V26 H49 A13.5 13.5 0 0 1 49 53 H43.5 L55.5 69.5" stroke="#fff"/></g></svg>
       Rosterly
     </a>
-    <a class="lang" href="../" hreflang="it">Italiano</a>
+    <select class="lang" aria-label="Language" onchange="location.href=this.value"><option value="../">Italiano</option><option value="../en/" selected>English</option><option value="../es/">Español</option><option value="../fr/">Français</option><option value="../de/">Deutsch</option><option value="../pt/">Português</option><option value="../nl/">Nederlands</option><option value="../pl/">Polski</option></select>
   </header>
 
   <div class="hero">
@@ -178,7 +184,7 @@
     <details><summary>Do I need an account or an internet connection?</summary><p>No. Rosterly works offline with no sign-up: open the app and start.</p></details>
     <details><summary>Do I lose my data if I change phone?</summary><p>No: create a backup in the app and save it to Drive or iCloud, then restore it on the new phone in seconds. The phone’s own automatic backup also includes the app’s data.</p></details>
     <details><summary>Can I issue receipts?</summary><p>Yes, with Pro you create numbered receipts and a yearly payment statement for each athlete, with your club’s letterhead.</p></details>
-    <details><summary>Which languages are available?</summary><p>English, Italian, Spanish, French, German and Portuguese, with your local currency.</p></details>
+    <details><summary>Which languages are available?</summary><p>English, Italian, Spanish, French, German, Portuguese, Dutch and Polish, with your local currency.</p></details>
   </div>
 </section>
 
