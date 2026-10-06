@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rosterly – App per allenatori: quote, presenze e certificati medici</title>
+<meta name="description" content="Rosterly è l'app per allenatori, palestre e ASD: quote mensili, registro presenze con appello in 10 secondi, certificati medici con scadenze, solleciti WhatsApp e ricevute PDF. Senza account, i dati restano sul telefono.">
+<meta name="keywords" content="app allenatori, gestione palestra, gestione ASD, registro presenze, quote mensili, certificato medico sportivo, ricevute sportive, app scuola di danza, app calcio giovanile">
+<link rel="canonical" href="https://ccpod-cloud.github.io/rosterly/">
+<link rel="alternate" hreflang="it" href="https://ccpod-cloud.github.io/rosterly/">
+<link rel="alternate" hreflang="en" href="https://ccpod-cloud.github.io/rosterly/en/">
+<link rel="alternate" hreflang="x-default" href="https://ccpod-cloud.github.io/rosterly/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rosterly – quote, presenze e certificati dei tuoi atleti">
+<meta property="og:description" content="Il registro di chi allena, sempre in tasca. Senza account, i dati restano sul telefono.">
+<meta property="og:url" content="https://ccpod-cloud.github.io/rosterly/">
+<meta name="theme-color" content="#1D3BFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%231D3BFF'/%3E%3Cg transform='translate(-4.5 0)' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='10.5'%3E%3Cpath d='M55.5 69.5 L80 38' stroke='%23FF5B2E'/%3E%3Cpath d='M30 75 V26 H49 A13.5 13.5 0 0 1 49 53 H43.5 L55.5 69.5' stroke='%23fff'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Rosterly",
+  "applicationCategory": "SportsApplication",
+  "operatingSystem": "Android, iOS",
+  "description": "App per allenatori: quote mensili, presenze, certificati medici, solleciti WhatsApp e ricevute PDF. Dati solo sul telefono.",
+  "inLanguage": ["it", "en", "es", "fr", "de", "pt"],
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Gratis fino a 10 atleti" },
+    { "@type": "Offer", "price": "1.99", "priceCurrency": "EUR", "description": "Rosterly Pro mensile" }
+  ]
+}
+</script>
+<style>
+  /* Layout: hero with the month "scoreboard" as the signature, then features, privacy, price, FAQ. */
+  :root {
+    --bg: #F4F6FB; --surface: #FFFFFF; --ink: #0D1433; --muted: #5B6382; --line: #DFE4F0;
+    --primary: #1D3BFF; --accent: #FF5B2E; --ok: #12A150;
+    --display: 'Archivo', system-ui, sans-serif; --body: 'Archivo', system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #070B1F; --surface: #10152E; --ink: #EEF1FF; --muted: #8C93B5; --line: #242C52; --primary: #5C74FF; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--body); }
+  a { color: var(--primary); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+  header.top { display: flex; align-items: center; justify-content: space-between; padding-block: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 800 20px var(--display); font-stretch: 115%; color: var(--ink); text-decoration: none; }
+  .lang { font-size: 15px; font-weight: 600; text-decoration: none; }
+  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding-block: 40px 64px; }
+  h1 { font: 850 clamp(36px, 6vw, 60px)/1.02 var(--display); font-stretch: 118%; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 34ch; margin: 18px 0 26px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 14px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 15px; text-decoration: none; }
+  .soon { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  .board { background: var(--primary); color: #fff; border-radius: 28px; padding: 26px; box-shadow: 0 30px 60px -30px rgb(29 59 255 / 0.6); }
+  .board small { opacity: .85; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; }
+  .board .big { font: 850 54px/1 var(--display); font-stretch: 118%; margin-top: 12px; font-variant-numeric: tabular-nums; }
+  .board .big span { font-size: 20px; opacity: .7; font-weight: 600; }
+  .lanes { display: flex; gap: 3px; height: 14px; margin-top: 18px; }
+  .lanes i { flex: 1; border-radius: 3px; background: rgb(255 255 255 / .2); }
+  .lanes i.on { background: var(--accent); }
+  .board p { margin: 14px 0 0; font-size: 15px; opacity: .9; }
+  section { padding-block: 56px; border-top: 1px solid var(--line); }
+  h2 { font: 800 clamp(26px, 4vw, 36px)/1.1 var(--display); font-stretch: 112%; margin: 0 0 28px; text-wrap: balance; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .feat h3 { font: 750 19px/1.25 var(--display); margin: 0 0 6px; }
+  .feat p { margin: 0; color: var(--muted); font-size: 16px; }
+  .feat .ico { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: rgb(29 59 255 / .1); color: var(--primary); margin-bottom: 12px; font-size: 20px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .plan { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+  .plan.pro { border: 2px solid var(--primary); }
+  .plan .price { font: 850 38px/1 var(--display); font-stretch: 115%; margin: 8px 0 14px; }
+  .plan .price span { font-size: 16px; color: var(--muted); font-weight: 500; }
+  .plan ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  .plan li { margin-bottom: 6px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  footer { border-top: 1px solid var(--line); padding-block: 30px 50px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; }
+  footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 820px) {
+    .hero, .split { grid-template-columns: 1fr; gap: 32px; }
+    .grid { grid-template-columns: 1fr; }
+    .board .big { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1D3BFF"/><g transform="translate(-4.5 0)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.5"><path d="M55.5 69.5 L80 38" stroke="#FF5B2E"/><path d="M30 75 V26 H49 A13.5 13.5 0 0 1 49 53 H43.5 L55.5 69.5" stroke="#fff"/></g></svg>
+      Rosterly
+    </a>
+    <a class="lang" href="en/" hreflang="en">English</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>L’app per allenatori che tiene i conti al posto tuo.</h1>
+      <p class="lead">Quote mensili, appello e certificati medici dei tuoi atleti in un’unica app. Niente account, niente cloud: i dati restano sul tuo telefono.</p>
+      <div class="badges">
+        <span class="badge">App Store</span>
+        <span class="badge">Google Play</span>
+      </div>
+      <p class="soon">In arrivo su iPhone e Android. Gratis fino a 10 atleti.</p>
+    </div>
+    <div class="board" aria-label="Esempio: quote di ottobre, 540 euro incassati su 1210">
+      <small><span>Quote di ottobre</span><span>11 su 25 pagate</span></small>
+      <div class="big">540 € <span>/ 1.210 €</span></div>
+      <div class="lanes"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p>Mancano 670 € da incassare</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Tutto quello che un allenatore annota sul quaderno</h2>
+    <div class="grid">
+      <div class="feat"><div class="ico">€</div><h3>Quote mensili senza rincorrere</h3><p>Vedi chi ha pagato e chi no, segni l’incasso con un tocco e l’app calcola gli arretrati. Mensile, trimestrale o annuale.</p></div>
+      <div class="feat"><div class="ico">✓</div><h3>Appello in 10 secondi</h3><p>Scorri a destra per presente, a sinistra per assente. L’app ti dice chi sta mancando da tre allenamenti, prima che smetta.</p></div>
+      <div class="feat"><div class="ico">+</div><h3>Certificati medici in regola</h3><p>Fotografa il certificato, imposta la scadenza: ti avvisiamo 30 e 7 giorni prima e all’appello vedi chi non è in regola.</p></div>
+      <div class="feat"><div class="ico">↗</div><h3>Solleciti su WhatsApp</h3><p>Il messaggio per la quota o il certificato è già scritto, con importo e mesi. Per i minorenni va direttamente al genitore.</p></div>
+      <div class="feat"><div class="ico">§</div><h3>Ricevute e attestazioni PDF</h3><p>Ricevute numerate con la tua intestazione e attestazione annuale dei pagamenti per la detrazione delle spese sportive dei figli.</p></div>
+      <div class="feat"><div class="ico">◷</div><h3>Agenda e statistiche</h3><p>Allenamenti dai giorni dei gruppi, partite ed eventi, incassi mese per mese e presenze per gruppo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>I dati dei tuoi ragazzi restano sul tuo telefono</h2>
+      <p>Rosterly non ha server che ricevono i dati degli atleti: nessun account da creare, nessuna pubblicità, nessun tracciamento. Il backup è un file che salvi tu su Drive o iCloud, e puoi bloccare l’app con Face ID o impronta.</p>
+      <p><a href="privacy/">Leggi l’informativa privacy</a></p>
+    </div>
+    <div class="plan">
+      <h3 style="margin:0;font:750 19px var(--display)">Per chi allena</h3>
+      <ul style="margin-top:12px">
+        <li>Scuole di danza e ginnastica</li>
+        <li>Calcio, volley e basket giovanile</li>
+        <li>Arti marziali, nuoto, tennis</li>
+        <li>Personal trainer e piccole palestre</li>
+        <li>ASD e SSD con quote ricorrenti</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Prezzi</h2>
+    <div class="split">
+      <div class="plan">
+        <strong>Gratis</strong>
+        <div class="price">0 €</div>
+        <ul><li>Fino a 10 atleti</li><li>Gruppi e quote mensili</li><li>Incasso in un tocco e arretrati</li><li>Solleciti WhatsApp</li><li>Backup manuale</li></ul>
+      </div>
+      <div class="plan pro">
+        <strong>Rosterly Pro</strong>
+        <div class="price">1,99 € <span>/ mese · 14,99 € / anno</span></div>
+        <ul><li>Atleti e gruppi illimitati</li><li>Appello e registro presenze</li><li>Certificati e documenti con scadenze</li><li>Ricevute e attestazioni PDF</li><li>Notifiche, statistiche, agenda, export Excel</li><li>Blocco con Face ID · 7 giorni di prova gratis</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Domande frequenti</h2>
+    <details><summary>Serve un account o una connessione internet?</summary><p>No. Rosterly funziona offline e non chiede registrazione: apri l’app e inizi.</p></details>
+    <details><summary>Se cambio telefono perdo i dati?</summary><p>No: crea un backup dall’app e salvalo su Drive, iCloud o inviatelo; sul nuovo telefono lo ripristini in pochi secondi. Anche il backup automatico del telefono include i dati dell’app.</p></details>
+    <details><summary>Posso fare le ricevute per la detrazione delle spese sportive?</summary><p>Sì, con Pro generi ricevute numerate e l’attestazione annuale dei pagamenti per ogni atleta, con codice fiscale e intestazione della tua associazione.</p></details>
+    <details><summary>In che lingue è disponibile?</summary><p>Italiano, inglese, spagnolo, francese, tedesco e portoghese, con la valuta del tuo paese.</p></details>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Rosterly · <a href="mailto:ciao@agerelab.online">ciao@agerelab.online</a></span>
+    <nav><a href="privacy/">Privacy</a><a href="terms/">Termini d’uso</a><a href="en/">English</a></nav>
+  </footer>
+</div>
+</body>
+</html>
