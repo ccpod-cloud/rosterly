@@ -9,6 +9,12 @@
 <link rel="canonical" href="https://ccpod-cloud.github.io/rosterly/">
 <link rel="alternate" hreflang="it" href="https://ccpod-cloud.github.io/rosterly/">
 <link rel="alternate" hreflang="en" href="https://ccpod-cloud.github.io/rosterly/en/">
+<link rel="alternate" hreflang="es" href="https://ccpod-cloud.github.io/rosterly/es/">
+<link rel="alternate" hreflang="fr" href="https://ccpod-cloud.github.io/rosterly/fr/">
+<link rel="alternate" hreflang="de" href="https://ccpod-cloud.github.io/rosterly/de/">
+<link rel="alternate" hreflang="pt" href="https://ccpod-cloud.github.io/rosterly/pt/">
+<link rel="alternate" hreflang="nl" href="https://ccpod-cloud.github.io/rosterly/nl/">
+<link rel="alternate" hreflang="pl" href="https://ccpod-cloud.github.io/rosterly/pl/">
 <link rel="alternate" hreflang="x-default" href="https://ccpod-cloud.github.io/rosterly/en/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rosterly – quote, presenze e certificati dei tuoi atleti">
@@ -27,7 +33,7 @@
   "applicationCategory": "SportsApplication",
   "operatingSystem": "Android, iOS",
   "description": "App per allenatori: quote mensili, presenze, certificati medici, solleciti WhatsApp e ricevute PDF. Dati solo sul telefono.",
-  "inLanguage": ["it", "en", "es", "fr", "de", "pt"],
+  "inLanguage": ["it", "en", "es", "fr", "de", "pt", "nl", "pl"],
   "offers": [
     { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Gratis fino a 10 atleti" },
     { "@type": "Offer", "price": "1.99", "priceCurrency": "EUR", "description": "Rosterly Pro mensile" }
@@ -51,7 +57,7 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
   header.top { display: flex; align-items: center; justify-content: space-between; padding-block: 18px; }
   .brand { display: flex; align-items: center; gap: 10px; font: 800 20px var(--display); font-stretch: 115%; color: var(--ink); text-decoration: none; }
-  .lang { font-size: 15px; font-weight: 600; text-decoration: none; }
+  .lang { font: 600 15px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; }
   .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding-block: 40px 64px; }
   h1 { font: 850 clamp(36px, 6vw, 60px)/1.02 var(--display); font-stretch: 118%; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
   .lead { font-size: 19px; color: var(--muted); max-width: 34ch; margin: 18px 0 26px; }
@@ -98,7 +104,7 @@
       <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1D3BFF"/><g transform="translate(-4.5 0)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.5"><path d="M55.5 69.5 L80 38" stroke="#FF5B2E"/><path d="M30 75 V26 H49 A13.5 13.5 0 0 1 49 53 H43.5 L55.5 69.5" stroke="#fff"/></g></svg>
       Rosterly
     </a>
-    <a class="lang" href="en/" hreflang="en">English</a>
+    <select class="lang" aria-label="Language" onchange="location.href=this.value"><option value="" selected>Italiano</option><option value="en/">English</option><option value="es/">Español</option><option value="fr/">Français</option><option value="de/">Deutsch</option><option value="pt/">Português</option><option value="nl/">Nederlands</option><option value="pl/">Polski</option></select>
   </header>
 
   <div class="hero">
@@ -178,7 +184,7 @@
     <details><summary>Serve un account o una connessione internet?</summary><p>No. Rosterly funziona offline e non chiede registrazione: apri l’app e inizi.</p></details>
     <details><summary>Se cambio telefono perdo i dati?</summary><p>No: crea un backup dall’app e salvalo su Drive, iCloud o inviatelo; sul nuovo telefono lo ripristini in pochi secondi. Anche il backup automatico del telefono include i dati dell’app.</p></details>
     <details><summary>Posso fare le ricevute per la detrazione delle spese sportive?</summary><p>Sì, con Pro generi ricevute numerate e l’attestazione annuale dei pagamenti per ogni atleta, con codice fiscale e intestazione della tua associazione.</p></details>
-    <details><summary>In che lingue è disponibile?</summary><p>Italiano, inglese, spagnolo, francese, tedesco e portoghese, con la valuta del tuo paese.</p></details>
+    <details><summary>In che lingue è disponibile?</summary><p>Italiano, inglese, spagnolo, francese, tedesco, portoghese, olandese e polacco, con la valuta del tuo paese.</p></details>
   </div>
 </section>
 
