@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rosterly – App voor trainers: contributie, aanwezigheid en medische keuring</title>
+<meta name="description" content="Rosterly is de app voor trainers, clubs en kleine sportscholen: contributie, aanwezigheid in 10 seconden, medische verklaringen met vervalmeldingen, WhatsApp-herinneringen en pdf-bonnen. Zonder account: de gegevens blijven op je telefoon.">
+<meta name="keywords" content="trainer app, contributie bijhouden, presentielijst app, aanwezigheid registreren, sportclub beheer, dansschool app, vechtsportschool app, ledenadministratie">
+<link rel="canonical" href="https://ccpod-cloud.github.io/rosterly/nl/">
+<link rel="alternate" hreflang="it" href="https://ccpod-cloud.github.io/rosterly/">
+<link rel="alternate" hreflang="en" href="https://ccpod-cloud.github.io/rosterly/en/">
+<link rel="alternate" hreflang="es" href="https://ccpod-cloud.github.io/rosterly/es/">
+<link rel="alternate" hreflang="fr" href="https://ccpod-cloud.github.io/rosterly/fr/">
+<link rel="alternate" hreflang="de" href="https://ccpod-cloud.github.io/rosterly/de/">
+<link rel="alternate" hreflang="pt" href="https://ccpod-cloud.github.io/rosterly/pt/">
+<link rel="alternate" hreflang="nl" href="https://ccpod-cloud.github.io/rosterly/nl/">
+<link rel="alternate" hreflang="pl" href="https://ccpod-cloud.github.io/rosterly/pl/">
+<link rel="alternate" hreflang="x-default" href="https://ccpod-cloud.github.io/rosterly/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rosterly – contributie, aanwezigheid en keuringen voor trainers">
+<meta property="og:description" content="Het trainersboekje, altijd op zak. Zonder account: de gegevens blijven op je telefoon.">
+<meta property="og:url" content="https://ccpod-cloud.github.io/rosterly/nl/">
+<meta name="theme-color" content="#1D3BFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%231D3BFF'/%3E%3Cg transform='translate(-4.5 0)' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='10.5'%3E%3Cpath d='M55.5 69.5 L80 38' stroke='%23FF5B2E'/%3E%3Cpath d='M30 75 V26 H49 A13.5 13.5 0 0 1 49 53 H43.5 L55.5 69.5' stroke='%23fff'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Rosterly",
+  "applicationCategory": "SportsApplication",
+  "operatingSystem": "Android, iOS",
+  "description": "App voor trainers: contributie, aanwezigheid, medische verklaringen, WhatsApp-herinneringen en pdf-bonnen. Gegevens blijven op de telefoon.",
+  "inLanguage": ["it", "en", "es", "fr", "de", "pt", "nl", "pl"],
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Gratis tot 10 sporters" },
+    { "@type": "Offer", "price": "1.99", "priceCurrency": "EUR", "description": "Rosterly Pro per maand" }
+  ]
+}
+</script>
+<style>
+  /* Layout: hero with the month "scoreboard" as the signature, then features, privacy, price, FAQ. */
+  :root {
+    --bg: #F4F6FB; --surface: #FFFFFF; --ink: #0D1433; --muted: #5B6382; --line: #DFE4F0;
+    --primary: #1D3BFF; --accent: #FF5B2E; --ok: #12A150;
+    --display: 'Archivo', system-ui, sans-serif; --body: 'Archivo', system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #070B1F; --surface: #10152E; --ink: #EEF1FF; --muted: #8C93B5; --line: #242C52; --primary: #5C74FF; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--body); }
+  a { color: var(--primary); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+  header.top { display: flex; align-items: center; justify-content: space-between; padding-block: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; font: 800 20px var(--display); font-stretch: 115%; color: var(--ink); text-decoration: none; }
+  .lang { font: 600 15px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; }
+  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding-block: 40px 64px; }
+  h1 { font: 850 clamp(36px, 6vw, 60px)/1.02 var(--display); font-stretch: 118%; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 34ch; margin: 18px 0 26px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 14px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 15px; text-decoration: none; }
+  .soon { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  .board { background: var(--primary); color: #fff; border-radius: 28px; padding: 26px; box-shadow: 0 30px 60px -30px rgb(29 59 255 / 0.6); }
+  .board small { opacity: .85; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; }
+  .board .big { font: 850 54px/1 var(--display); font-stretch: 118%; margin-top: 12px; font-variant-numeric: tabular-nums; }
+  .board .big span { font-size: 20px; opacity: .7; font-weight: 600; }
+  .lanes { display: flex; gap: 3px; height: 14px; margin-top: 18px; }
+  .lanes i { flex: 1; border-radius: 3px; background: rgb(255 255 255 / .2); }
+  .lanes i.on { background: var(--accent); }
+  .board p { margin: 14px 0 0; font-size: 15px; opacity: .9; }
+  section { padding-block: 56px; border-top: 1px solid var(--line); }
+  h2 { font: 800 clamp(26px, 4vw, 36px)/1.1 var(--display); font-stretch: 112%; margin: 0 0 28px; text-wrap: balance; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .feat h3 { font: 750 19px/1.25 var(--display); margin: 0 0 6px; }
+  .feat p { margin: 0; color: var(--muted); font-size: 16px; }
+  .feat .ico { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: rgb(29 59 255 / .1); color: var(--primary); margin-bottom: 12px; font-size: 20px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .plan { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+  .plan.pro { border: 2px solid var(--primary); }
+  .plan .price { font: 850 38px/1 var(--display); font-stretch: 115%; margin: 8px 0 14px; }
+  .plan .price span { font-size: 16px; color: var(--muted); font-weight: 500; }
+  .plan ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  .plan li { margin-bottom: 6px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  footer { border-top: 1px solid var(--line); padding-block: 30px 50px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; }
+  footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 820px) {
+    .hero, .split { grid-template-columns: 1fr; gap: 32px; }
+    .grid { grid-template-columns: 1fr; }
+    .board .big { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1D3BFF"/><g transform="translate(-4.5 0)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="10.5"><path d="M55.5 69.5 L80 38" stroke="#FF5B2E"/><path d="M30 75 V26 H49 A13.5 13.5 0 0 1 49 53 H43.5 L55.5 69.5" stroke="#fff"/></g></svg>
+      Rosterly
+    </a>
+    <select class="lang" aria-label="Language" onchange="location.href=this.value"><option value="../">Italiano</option><option value="../en/">English</option><option value="../es/">Español</option><option value="../fr/">Français</option><option value="../de/">Deutsch</option><option value="../pt/">Português</option><option value="../nl/" selected>Nederlands</option><option value="../pl/">Polski</option></select>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>De trainersapp die de boekhouding voor je bijhoudt.</h1>
+      <p class="lead">Contributie, presentielijst en medische verklaringen van je sporters in één app. Geen account, geen cloud: je gegevens blijven op je telefoon.</p>
+      <div class="badges">
+        <span class="badge">App Store</span>
+        <span class="badge">Google Play</span>
+      </div>
+      <p class="soon">Binnenkort voor iPhone en Android. Gratis tot 10 sporters.</p>
+    </div>
+    <div class="board" aria-label="Voorbeeld: contributie oktober, 540 ontvangen van 1.210">
+      <small><span>Contributie oktober</span><span>11 van 25 betaald</span></small>
+      <div class="big">€ 540 <span>/ € 1.210</span></div>
+      <div class="lanes"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p>Nog € 670 te innen</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Alles wat een trainer in zijn boekje bijhoudt</h2>
+    <div class="grid">
+      <div class="feat"><div class="ico">€</div><h3>Contributie zonder achter mensen aan te zitten</h3><p>Zie wie betaald heeft, markeer betalingen met één tik en laat de app achterstanden berekenen. Per maand, kwartaal of jaar.</p></div>
+      <div class="feat"><div class="ico">✓</div><h3>Presentie in 10 seconden</h3><p>Veeg naar rechts voor aanwezig, naar links voor afwezig. De app laat zien wie drie trainingen gemist heeft voordat hij stopt.</p></div>
+      <div class="feat"><div class="ico">+</div><h3>Keuringen altijd op orde</h3><p>Fotografeer de verklaring en stel de vervaldatum in: meldingen 30 en 7 dagen vooraf, en bij de presentie zie je wie niet is goedgekeurd.</p></div>
+      <div class="feat"><div class="ico">↗</div><h3>WhatsApp-herinneringen</h3><p>Het bericht over contributie of keuring is al geschreven, met bedrag en maanden. Bij minderjarigen gaat het direct naar de ouders.</p></div>
+      <div class="feat"><div class="ico">§</div><h3>Pdf-bonnen en overzichten</h3><p>Genummerde bonnen met het briefhoofd van je club en een jaaroverzicht van betalingen voor ouders.</p></div>
+      <div class="feat"><div class="ico">◷</div><h3>Agenda en statistieken</h3><p>Trainingen volgens het rooster van elke groep, wedstrijden en evenementen, inkomsten per maand en aanwezigheid per groep.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>De gegevens van je sporters blijven op je telefoon</h2>
+      <p>Rosterly heeft geen servers die de gegevens van je sporters ontvangen: geen account, geen advertenties, geen tracking. De back-up is een bestand dat je in Drive of iCloud bewaart, en je kunt de app vergrendelen met Face ID of vingerafdruk.</p>
+      <p><a href="../privacy/#en">Lees het privacybeleid</a></p>
+    </div>
+    <div class="plan">
+      <h3 style="margin:0;font:750 19px var(--display)">Gemaakt voor</h3>
+      <ul style="margin-top:12px">
+        <li>Dans- en turnscholen</li>
+        <li>Jeugdvoetbal, volleybal en basketbal</li>
+        <li>Vechtsport, zwemmen, tennis</li>
+        <li>Personal trainers en kleine sportscholen</li>
+        <li>Clubs met maandelijkse contributie</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Prijzen</h2>
+    <div class="split">
+      <div class="plan">
+        <strong>Gratis</strong>
+        <div class="price">€0</div>
+        <ul><li>Tot 10 sporters</li><li>Groepen en maandcontributie</li><li>Betalingen met één tik en achterstanden</li><li>WhatsApp-herinneringen</li><li>Handmatige back-up</li></ul>
+      </div>
+      <div class="plan pro">
+        <strong>Rosterly Pro</strong>
+        <div class="price">€ 1,99 <span>/ maand · € 14,99 / jaar</span></div>
+        <ul><li>Onbeperkt sporters en groepen</li><li>Presentie en presentielijst</li><li>Keuringen en documenten met vervaldatum</li><li>Pdf-bonnen en jaaroverzichten</li><li>Meldingen, statistieken, agenda, Excel-export</li><li>Vergrendeling met Face ID · 7 dagen gratis proberen</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>FAQ</h2>
+    <details><summary>Heb ik een account of internet nodig?</summary><p>Nee. Rosterly werkt offline en zonder registratie: open de app en begin.</p></details>
+    <details><summary>Ben ik mijn gegevens kwijt als ik van telefoon wissel?</summary><p>Nee: maak een back-up in de app, bewaar die in Drive of iCloud en zet hem in een paar seconden terug op de nieuwe telefoon.</p></details>
+    <details><summary>Kan ik bonnen maken?</summary><p>Ja, met Pro maak je genummerde bonnen en een jaaroverzicht van betalingen per sporter, met het briefhoofd van je club.</p></details>
+    <details><summary>In welke talen is de app beschikbaar?</summary><p>Nederlands, Engels, Italiaans, Spaans, Frans, Duits, Portugees en Pools, met je eigen valuta.</p></details>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Rosterly · <a href="mailto:ciao@agerelab.online">ciao@agerelab.online</a></span>
+    <nav><a href="../privacy/#en">Privacy</a><a href="../terms/#en">Gebruiksvoorwaarden</a><a href="../">Italiano</a> <a href="../en/">English</a></nav>
+  </footer>
+</div>
+</body>
+</html>
